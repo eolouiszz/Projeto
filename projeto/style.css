@@ -1,0 +1,88 @@
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Aplica a animação ao fundo do body */
+body {
+    background: linear-gradient(135deg, #707cd6, #8e44ad, #3498db, #8e44ad);
+    background-size: 200% 200%; /* Mantém o gradiente para a animação */
+    animation: gradient-animation 20s ease-in-out infinite;
+    color: white;
+    margin-left: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Garante que o body ocupe no mínimo a altura da tela */
+    max-width: 100%; /* Evita que o body ultrapasse o tamanho da tela */
+}
+
+
+
+h1 {
+    font-family: 'Commissioner';
+    font-size: 65px;
+    line-height: 1.3;
+}
+
+strong {
+    color: rgb(15, 12, 12);
+}
+
+h3 {
+    font-family: 'Quicksand';
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #bbed2f;
+    border-radius: 12px;
+    margin: 20px; /* Margem reduzida para evitar deslocamento */
+    height: 80px; /* Ajuste a altura do botão */
+    width: 220px; /* Largura do botão */
+    font-size: 16px;
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #90bc1f; /* Muda a cor do fundo ao passar o mouse */
+}
+
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: 'Quicksand';
+    border: 2px solid black;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suavidade do efeito */
+}
+
+/* Efeito de hover */
+.div:hover {
+    transform: scale(1.02); /* Aumenta o tamanho levemente */
+    background-color: #e0e0e0; /* Escurece levemente o fundo */
+}
+
+/* Media Query para telas maiores que 600px */
+@media (min-width: 700px) {
+    .div {
+        position: absolute;
+        top: 70px; /* Ajusta a altura em relação ao topo */
+        right: 20px; /* Afasta do lado direito */
+        width: 300px; /* Define uma largura fixa para telas maiores */
+        margin: 0; /* Remove margens para posicionamento exato */
+    }
+}
